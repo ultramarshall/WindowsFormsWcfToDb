@@ -1,6 +1,3 @@
-# WindowsFormsWcfToDb
-Implementasi Windows Communication Foundation (WCF) di Dektop Windows Form C#
-
 # Windows Foundation Service (WCF) with C#
 
 #### Database Design
