@@ -1,45 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfToDb" />
-  <xs:element name="GetData">
+  <xs:element name="TambahBiodata">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="value" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="p" nillable="true" type="q1:Biodata" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDataResponse">
+  <xs:element name="TambahBiodataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TambahBiodataResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDataUsingDataContract">
+  <xs:element name="EditBiodata">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="p" nillable="true" type="q2:Biodata" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetDataUsingDataContractResponse">
+  <xs:element name="EditBiodataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+        <xs:element minOccurs="0" name="EditBiodataResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertBiodata">
+  <xs:element name="HapusBiodata">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="p" nillable="true" type="q3:Biodata" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertBiodataResponse">
+  <xs:element name="HapusBiodataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertBiodataResult" type="xs:int" />
+        <xs:element minOccurs="0" name="HapusBiodataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBiodata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="p" nillable="true" type="q4:Biodata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBiodataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="GetBiodataResult" nillable="true" type="q5:Biodata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBiodata">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBiodataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfToDb" minOccurs="0" name="GetAllBiodataResult" nillable="true" type="q6:ArrayOfBiodata" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

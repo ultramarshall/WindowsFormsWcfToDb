@@ -15,67 +15,6 @@ namespace WindowsFormsWctToDb.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WcfToDb")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Biodata", Namespace="http://schemas.datacontract.org/2004/07/WcfToDb")]
     [System.SerializableAttribute()]
     public partial class Biodata : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -155,23 +94,35 @@ namespace WindowsFormsWctToDb.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TambahBiodata", ReplyAction="http://tempuri.org/IService1/TambahBiodataResponse")]
+        int TambahBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/TambahBiodata", ReplyAction="http://tempuri.org/IService1/TambahBiodataResponse")]
+        System.Threading.Tasks.Task<int> TambahBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        WindowsFormsWctToDb.ServiceReference1.CompositeType GetDataUsingDataContract(WindowsFormsWctToDb.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditBiodata", ReplyAction="http://tempuri.org/IService1/EditBiodataResponse")]
+        int EditBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WindowsFormsWctToDb.ServiceReference1.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditBiodata", ReplyAction="http://tempuri.org/IService1/EditBiodataResponse")]
+        System.Threading.Tasks.Task<int> EditBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertBiodata", ReplyAction="http://tempuri.org/IService1/InsertBiodataResponse")]
-        int InsertBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HapusBiodata", ReplyAction="http://tempuri.org/IService1/HapusBiodataResponse")]
+        int HapusBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertBiodata", ReplyAction="http://tempuri.org/IService1/InsertBiodataResponse")]
-        System.Threading.Tasks.Task<int> InsertBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HapusBiodata", ReplyAction="http://tempuri.org/IService1/HapusBiodataResponse")]
+        System.Threading.Tasks.Task<int> HapusBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBiodata", ReplyAction="http://tempuri.org/IService1/GetBiodataResponse")]
+        WindowsFormsWctToDb.ServiceReference1.Biodata GetBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBiodata", ReplyAction="http://tempuri.org/IService1/GetBiodataResponse")]
+        System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.Biodata> GetBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllBiodata", ReplyAction="http://tempuri.org/IService1/GetAllBiodataResponse")]
+        WindowsFormsWctToDb.ServiceReference1.Biodata[] GetAllBiodata();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllBiodata", ReplyAction="http://tempuri.org/IService1/GetAllBiodataResponse")]
+        System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.Biodata[]> GetAllBiodataAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -201,28 +152,44 @@ namespace WindowsFormsWctToDb.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public int TambahBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.TambahBiodata(p);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<int> TambahBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.TambahBiodataAsync(p);
         }
         
-        public WindowsFormsWctToDb.ServiceReference1.CompositeType GetDataUsingDataContract(WindowsFormsWctToDb.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public int EditBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.EditBiodata(p);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WindowsFormsWctToDb.ServiceReference1.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<int> EditBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.EditBiodataAsync(p);
         }
         
-        public int InsertBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
-            return base.Channel.InsertBiodata(p);
+        public int HapusBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.HapusBiodata(p);
         }
         
-        public System.Threading.Tasks.Task<int> InsertBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
-            return base.Channel.InsertBiodataAsync(p);
+        public System.Threading.Tasks.Task<int> HapusBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.HapusBiodataAsync(p);
+        }
+        
+        public WindowsFormsWctToDb.ServiceReference1.Biodata GetBiodata(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.GetBiodata(p);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.Biodata> GetBiodataAsync(WindowsFormsWctToDb.ServiceReference1.Biodata p) {
+            return base.Channel.GetBiodataAsync(p);
+        }
+        
+        public WindowsFormsWctToDb.ServiceReference1.Biodata[] GetAllBiodata() {
+            return base.Channel.GetAllBiodata();
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsWctToDb.ServiceReference1.Biodata[]> GetAllBiodataAsync() {
+            return base.Channel.GetAllBiodataAsync();
         }
     }
 }

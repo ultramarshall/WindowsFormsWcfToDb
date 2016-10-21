@@ -35,11 +35,17 @@
             this.txtNama = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUmur = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.dgvBiodata = new System.Windows.Forms.DataGridView();
+            this.getBiodata = new System.Windows.Forms.Button();
+            this.AllBiodata = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBiodata)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(54, 108);
+            this.btnInsert.Location = new System.Drawing.Point(307, 19);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 0;
@@ -51,7 +57,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(54, 21);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(207, 20);
+            this.txtId.Size = new System.Drawing.Size(237, 20);
             this.txtId.TabIndex = 1;
             // 
             // label1
@@ -74,9 +80,9 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(54, 47);
+            this.txtNama.Location = new System.Drawing.Point(54, 50);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(207, 20);
+            this.txtNama.Size = new System.Drawing.Size(237, 20);
             this.txtNama.TabIndex = 3;
             // 
             // label3
@@ -90,16 +96,70 @@
             // 
             // txtUmur
             // 
-            this.txtUmur.Location = new System.Drawing.Point(54, 73);
+            this.txtUmur.Location = new System.Drawing.Point(54, 79);
             this.txtUmur.Name = "txtUmur";
-            this.txtUmur.Size = new System.Drawing.Size(207, 20);
+            this.txtUmur.Size = new System.Drawing.Size(237, 20);
             this.txtUmur.TabIndex = 5;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(307, 48);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.Location = new System.Drawing.Point(307, 77);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(75, 23);
+            this.btnHapus.TabIndex = 8;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = true;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            // 
+            // dgvBiodata
+            // 
+            this.dgvBiodata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBiodata.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvBiodata.Location = new System.Drawing.Point(0, 142);
+            this.dgvBiodata.Name = "dgvBiodata";
+            this.dgvBiodata.Size = new System.Drawing.Size(395, 165);
+            this.dgvBiodata.TabIndex = 9;
+            // 
+            // getBiodata
+            // 
+            this.getBiodata.Location = new System.Drawing.Point(12, 113);
+            this.getBiodata.Name = "getBiodata";
+            this.getBiodata.Size = new System.Drawing.Size(75, 23);
+            this.getBiodata.TabIndex = 10;
+            this.getBiodata.Text = "Cari";
+            this.getBiodata.UseVisualStyleBackColor = true;
+            this.getBiodata.Click += new System.EventHandler(this.getBiodata_Click);
+            // 
+            // AllBiodata
+            // 
+            this.AllBiodata.Location = new System.Drawing.Point(93, 113);
+            this.AllBiodata.Name = "AllBiodata";
+            this.AllBiodata.Size = new System.Drawing.Size(127, 23);
+            this.AllBiodata.TabIndex = 11;
+            this.AllBiodata.Text = "Cari Semua Biodata";
+            this.AllBiodata.UseVisualStyleBackColor = true;
+            this.AllBiodata.Click += new System.EventHandler(this.AllBiodata_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 149);
+            this.ClientSize = new System.Drawing.Size(395, 307);
+            this.Controls.Add(this.AllBiodata);
+            this.Controls.Add(this.getBiodata);
+            this.Controls.Add(this.dgvBiodata);
+            this.Controls.Add(this.btnHapus);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtUmur);
             this.Controls.Add(this.label2);
@@ -109,6 +169,7 @@
             this.Controls.Add(this.btnInsert);
             this.Name = "Form1";
             this.Text = "Biodata";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBiodata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +184,11 @@
         private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUmur;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.DataGridView dgvBiodata;
+        private System.Windows.Forms.Button getBiodata;
+        private System.Windows.Forms.Button AllBiodata;
     }
 }
 

@@ -7,42 +7,62 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfToDb" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="IService1_TambahBiodata_InputMessage">
+    <wsdl:part name="parameters" element="tns:TambahBiodata" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="IService1_TambahBiodata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TambahBiodataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="IService1_EditBiodata_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditBiodata" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="IService1_EditBiodata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditBiodataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_InsertBiodata_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertBiodata" />
+  <wsdl:message name="IService1_HapusBiodata_InputMessage">
+    <wsdl:part name="parameters" element="tns:HapusBiodata" />
   </wsdl:message>
-  <wsdl:message name="IService1_InsertBiodata_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertBiodataResponse" />
+  <wsdl:message name="IService1_HapusBiodata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HapusBiodataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBiodata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBiodata" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBiodata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBiodataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllBiodata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBiodata" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllBiodata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBiodataResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    <wsdl:operation name="TambahBiodata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TambahBiodata" message="tns:IService1_TambahBiodata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TambahBiodataResponse" message="tns:IService1_TambahBiodata_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="EditBiodata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditBiodata" message="tns:IService1_EditBiodata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditBiodataResponse" message="tns:IService1_EditBiodata_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="InsertBiodata">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertBiodata" message="tns:IService1_InsertBiodata_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertBiodataResponse" message="tns:IService1_InsertBiodata_OutputMessage" />
+    <wsdl:operation name="HapusBiodata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/HapusBiodata" message="tns:IService1_HapusBiodata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/HapusBiodataResponse" message="tns:IService1_HapusBiodata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBiodata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBiodata" message="tns:IService1_GetBiodata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBiodataResponse" message="tns:IService1_GetBiodata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBiodata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllBiodata" message="tns:IService1_GetAllBiodata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllBiodataResponse" message="tns:IService1_GetAllBiodata_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+    <wsdl:operation name="TambahBiodata">
+      <soap:operation soapAction="http://tempuri.org/IService1/TambahBiodata" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -50,8 +70,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="EditBiodata">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditBiodata" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -59,8 +79,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertBiodata">
-      <soap:operation soapAction="http://tempuri.org/IService1/InsertBiodata" style="document" />
+    <wsdl:operation name="HapusBiodata">
+      <soap:operation soapAction="http://tempuri.org/IService1/HapusBiodata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBiodata">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBiodata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBiodata">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllBiodata" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
